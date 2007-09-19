@@ -1,5 +1,5 @@
 %define name hcl
-%define version 1.0
+%define version 1.1
 %define release %mkrel 1
 
 Summary: Collect hardware information
@@ -20,6 +20,7 @@ database and getting help on support.
 
 %prep
 %setup -q -n %{name}-%version
+%find_lang drakhcl
 
 %build
 %make
@@ -31,6 +32,6 @@ rm -rf %buildroot
 %clean
 rm -rf %buildroot/
 
-%files
+%files -f drakhcl.lang
 %doc AUTHORS COPYING README
 %_sbindir/*
