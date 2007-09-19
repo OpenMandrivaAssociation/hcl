@@ -22,6 +22,7 @@ database and getting help on support.
 %setup -q -n %{name}-%version
 
 %build
+%make
 
 %install
 rm -rf %buildroot
