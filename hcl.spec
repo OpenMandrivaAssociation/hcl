@@ -25,10 +25,7 @@ database and getting help on support.
 
 %install
 rm -rf %buildroot
-
-mkdir -p %buildroot/%_sbindir
-
-install hclcollector hclGUI hcldmidecodeinfo hcllshwinfo hclcpuinfo hclupload %buildroot/%_sbindir
+%makeinstall_std
 
 %clean
 rm -rf %buildroot/
