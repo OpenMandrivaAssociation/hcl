@@ -11,7 +11,7 @@ Group: System/Configuration/Hardware
 Source0: %name-%version.tar.bz2
 BuildArch: noarch
 Requires: hwreport
-Requires: perl
+Requires: perl tar bzip2
 Requires: lshw
 
 %description
