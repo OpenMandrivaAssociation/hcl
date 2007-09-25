@@ -1,6 +1,6 @@
 %define name hcl
-%define version 1.2
-%define release %mkrel 2
+%define version 1.3
+%define release %mkrel 1
 
 Summary: Collect hardware information
 Name: %{name}
@@ -8,9 +8,9 @@ Version: %{version}
 Release: %{release}
 License: GPL
 Group: System/Configuration/Hardware
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0: %name-%version.tar.bz2
 BuildArch: noarch
-Requires: hwreport
 Requires: perl tar bzip2
 Requires: lshw
 
@@ -27,6 +27,9 @@ database and getting help on support.
 %install
 rm -rf %buildroot
 %makeinstall_std
+install hclGUI hclcollector hclupload %buildroot/%_sbindir
+mkdir -p -m 0755 %{buildroot}%{_prefix}/lib/libDrakX
+install -D hclcollector.pm %{buildroot}%{_prefix}/lib/libDrakX
 %find_lang drakhcl
 
 %clean
@@ -34,4 +37,7 @@ rm -rf %buildroot/
 
 %files -f drakhcl.lang
 %doc AUTHORS COPYING README
-%_sbindir/*
+%_sbindir/hclGUI
+%_sbindir/hclcollector
+%_sbindir/hclupload
+%{_prefix}/lib/libDrakX/hclcollector.pm
