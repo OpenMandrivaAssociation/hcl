@@ -8,6 +8,7 @@ Version: %{version}
 Release: %{release}
 License: GPL
 Group: System/Configuration/Hardware
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0: %name-%version.tar.bz2
 BuildArch: noarch
 Requires: perl tar bzip2
