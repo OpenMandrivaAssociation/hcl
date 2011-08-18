@@ -1,6 +1,6 @@
 %define name hcl
 %define version 1.7.1
-%define release %mkrel 5
+%define release 6
 
 Summary: Collect hardware information
 Name: %{name}
