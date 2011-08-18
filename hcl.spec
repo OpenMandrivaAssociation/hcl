@@ -11,7 +11,7 @@ Group: System/Configuration/Hardware
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source0: %name-%version.tar.bz2
 BuildArch: noarch
-Requires: perl tar bzip2
+Requires: perl tar bzip2 perl-SOAP-Lite
 Requires: lshw
 
 %description
