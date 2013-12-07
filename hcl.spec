@@ -1,7 +1,7 @@
 Summary:	Collect hardware information
 Name:		hcl
 Version:	1.7.1
-Release:	7
+Release:	8
 License:	GPLv2
 Group:		System/Configuration/Hardware
 Source0:	%{name}-%{version}.tar.bz2
