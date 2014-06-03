@@ -1,12 +1,15 @@
 Summary:	Collect hardware information
 Name:		hcl
 Version:	1.7.1
-Release:	11
+Release:	12
 License:	GPLv2
 Group:		System/Configuration/Hardware
 Source0:	%{name}-%{version}.tar.bz2
 BuildArch:	noarch
-Requires:	perl tar bzip2 perl-SOAP-Lite
+Requires:	perl
+Requires:	bsdtar
+Requires:	bzip2
+Requires:	perl-SOAP-Lite
 Requires:	lshw
 
 %description
@@ -32,4 +35,3 @@ install -D hclcollector.pm %{buildroot}%{_prefix}/lib/libDrakX
 %{_sbindir}/hclcollector
 %{_sbindir}/hclupload
 %{_prefix}/lib/libDrakX/hclcollector.pm
-
