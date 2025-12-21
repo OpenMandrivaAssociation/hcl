@@ -12,6 +12,7 @@ Requires:	bzip2
 Requires:	perl-SOAP-Lite
 Requires:	lshw
 
+BuildRequires:	make
 %description
 hcl uploads your hardware information on Mandriva server to create a hardware
 database and getting help on support.
